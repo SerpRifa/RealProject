@@ -1,0 +1,14 @@
+
+<div class="main-mailbox">
+<div class="emailseditor" [ngClass]="focused" >
+    <div class="emailseditor-head">
+        <span  class="emailseditor-head-text"> Share <b>Board name</b> with other </span>
+    </div>
+    <emails-editor ></emails-editor>
+   
+</div>
+    <div class="emailseditor-list-button">
+        <button (click)="onSetRandomEmail()" class="emailseditor-button">Add email</button>
+        <button (click)="onGetCount()" class="emailseditor-button" style="margin-left:20px">Get email count</button>
+    </div>
+</div>

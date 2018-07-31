@@ -1,0 +1,21 @@
+
+    <div class="email-list">
+        
+        <span *ngFor="let email of emails" class="email-ed" [ngClass]="getValidClass(email)">
+        {{email}} <i class="delete" (click)="removeEmail(email)" ></i>
+        </span>    
+
+        <span style="display:inline-block;">
+        <input                
+            class="email-input"
+            placeholder = "add more people..."
+            [(ngModel)]="labelToAdd" 
+            (keydown)="onKeyDown($event)"        
+            (focusout)="focusOutFunction()"       
+            (paste)="onPaste($event.clipboardData.getData('Text')); $event.preventDefault();"            
+            
+        #email />
+        </span>  
+
+
+    </div> 
